@@ -25,7 +25,7 @@ namespace Mission_2Assignment
                 list.Add(sum);
             }
 
-
+            //returnt the list with dice values to main program 
             return list;
         }
     }

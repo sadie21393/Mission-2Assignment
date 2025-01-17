@@ -12,12 +12,8 @@ internal class Program
         // Get the number of Rolls from user 
         int rolls = int.Parse(Console.ReadLine());
 
+        //pass rolls to second class
         List <int> printlist = Class2.ThrowDice(rolls);
-
-        //for (int i = 0; i < printlist.Count; i++)
-        //{
-        //    Console.WriteLine(i + ": " + printlist[i]);
-        //}
 
         //Print the results and explanation of results
         Console.WriteLine("DICE ROLLING SIMULATION RESULTS ");
@@ -46,12 +42,14 @@ internal class Program
             per = ((float)sum / rolls) * 100;
 
             List <string> liststr = new List<string>();
+
             // for each value of 1 (out of a total of 100 for all groups) therefore counting 1%, add an * to the list 
             for (int j = 0; j < per; j++)
             {
                 liststr.Add("*");
             }
-            // for the given number we are solving for 2-12 print the number and the number of * based on percentage 
+
+            // for the given number we are solving for (2-12) print the number and the number of * based on percentage 
             Console.WriteLine(Convert.ToString(i) + ": " + string.Join("",liststr));
         }
 
